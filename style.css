@@ -1,0 +1,298 @@
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/736x/b1/98/42/b19842a9678d02722e97a4df7f67d461.jpg');
+    background-size: cover;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+h1 {
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 0px white;
+}
+
+.line {
+    height: 3px;
+    background: black;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+.btn {
+    width: 260px;
+    padding: 18px;
+    margin: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 15px;
+    border: 3px solid #000;
+    background: linear-gradient(145deg, #f5f5f5, #cfcfcf);
+    box-shadow: 5px 5px 0px #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #000;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+/* ========================= */
+/* INPUT */
+/* ========================= */
+input {
+    width: 280px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: #f5f5f5;
+    box-shadow: 3px 3px 0px black;
+    font-size: 16px;
+}
+
+input:focus {
+    background: white;
+    box-shadow: 5px 5px 0px black;
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* DASHBOARD */
+/* ========================= */
+.header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(193, 221, 129)
+}
+
+.box:hover {
+    transform: scale(1.1) rotate(5deg);
+    transition: 0.5s;
+    background: white;
+    box-shadow: 4px 4px 0px black;
+}
+
+/* RIGHT PANEL */
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BIG BOX */
+.big-box {
+    width: 400px;
+    height: 400px;
+    border: 12px solid black;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250px;
+    font-weight: bold;
+    box-shadow: 6px 6px 0px black;
+    background-color: rgb(193, 221, 129);
+}
+
+/* TEXT */
+h2 {
+    margin-top: 20px;
+    font-size: 30px;
+    text-shadow: 3px 3px 0px white;
+    letter-spacing: 3px;
+}
+
+/* SOCIAL */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fa-instagram:hover { color: #E1306C; }
+.fa-facebook:hover { color: #1877F2; }
+.fa-youtube:hover { color: #FF0000; }
+.fa-github:hover { color: #333; }
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(120, 151, 108);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .big-box {
+        width: 300px;
+        height: 300px;
+        font-size: 60px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 90px);
+        gap: 15px;
+    }
+
+    .box {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        width: 200px;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input {
+        width: 220px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 70px);
+        gap: 10px;
+    }
+
+    .box {
+        width: 70px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    .big-box {
+        width: 220px;
+        height: 220px;
+        font-size: 40px;
+    }
+
+    .social-icons i {
+        font-size: 24px;
+        color: #000;
+    }
+}
+
+/* SMALL DEVICE */
+@media (max-width: 400px) {
+
+    .grid {
+        grid-template-columns: repeat(3, 65px);
+    }
+
+    .box {
+        width: 65px;
+        height: 65px;
+    }
+
+    .big-box {
+        width: 180px;
+        height: 180px;
+        font-size: 30px;
+    }
+}
+.pages-btn {  
+    border-radius: 10px;
+    background-color: rgb(120, 151, 108);
+    border: 3px dashed antiquewhite;
+    size: 20px;
+    margin :20px;
+    font-size: larger;
+    font-family:Oswald;
+}
+
+.pages-btn:hover {
+    background-color: rgb(193, 221, 129);
+    color: black;
+    transform: scale(1.4);
+    font-family:Oswald;
+    transition: 0.4s;
+}
